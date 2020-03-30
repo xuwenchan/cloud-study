@@ -1,0 +1,218 @@
+package zookeeper;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import org.apache.zookeeper.CreateMode;
+import org.apache.zookeeper.WatchedEvent;
+import org.apache.zookeeper.Watcher;
+import org.apache.zookeeper.Watcher.Event.EventType;
+import org.apache.zookeeper.Watcher.Event.KeeperState;
+import org.apache.zookeeper.ZooDefs.Ids;
+import org.apache.zookeeper.ZooKeeper;
+
+public class ZookeeperWatcher implements Watcher{
+
+	/**
+	 * 定义原子变量
+	 */
+	
+	private AtomicInteger seq=new AtomicInteger();
+	/**
+	 * 定义session失效时间
+	 */
+	private static final int SESSION_TIMEOUT=10000;
+	/**
+	 * zookeeper服务器地址
+	 */
+	
+	private static final String CONNECTION_ADDR="192.168.75.128:2181";
+	/**
+	 * zookeeper路径设置
+	 */
+	private static final String PARENT_PATH="/p";
+	/**
+	 * zookeeper子路径设置
+	 */
+	private static final String CHILDREN_PATH="/p/c";
+	/**
+	 * 进入标识
+	 */
+	private static final String LOG_PREFIX_OF_MAIN="[MAIN]";
+	/**
+	 * zookeeper变量
+	 */
+	private ZooKeeper zk=null;
+	/**
+	 * 用于等待zookeeper连接建立之后通知阻塞程序继续向下执行
+	 */
+	private CountDownLatch connectedSemaphore =new CountDownLatch(1); 
+	/**
+	 * 创建zk连接
+	 */
+	
+	public void createConnection(String connectAddr,int sessionTimeout) {
+		this.releaseConnection();
+		try {
+			zk=new ZooKeeper(connectAddr,sessionTimeout,this);
+			System.out.println(LOG_PREFIX_OF_MAIN+"开始连接zk服务器");
+			connectedSemaphore.await();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void releaseConnection() {
+		if(this.zk!=null) {
+			try {
+				this.zk.close();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+	/**
+	 * 连接zk时，会触发process方法
+	 */
+	public void process(WatchedEvent event) {
+		System.out.println("进入process。。。。。。。。。event="+event);
+		try {
+			Thread.sleep(200);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		if(event==null) {
+			return ;
+		}
+		//连接状态
+		
+		KeeperState keeperState=event.getState();
+		//事件类型
+		EventType eventType=event.getType();
+		//首影响的path
+		String path=event.getPath();
+		//原子对象seq 记录进入process的次数
+		String logPrefix="【Watcher-】+"+this.seq.incrementAndGet();
+		System.out.println(logPrefix+"收到Watcher通知");
+		System.out.println(logPrefix+"连接状态:\t"+keeperState.toString());
+		System.out.println(logPrefix+"事件状态:\t"+eventType.toString());
+		if(KeeperState.SyncConnected==keeperState) {
+			//成功连接上zk服务器
+			if(EventType.None==eventType) {
+				System.out.println(logPrefix+"成功连接上zk服务器");
+				//程序继续向下执行
+				connectedSemaphore.countDown();
+			}
+			
+			//创建节点
+			else if(EventType.NodeCreated==eventType) {
+				System.out.println(logPrefix+"节点创建");
+				try {
+					Thread.sleep(100);
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+			//更新节点
+			else if(EventType.NodeDataChanged==eventType) {
+				System.out.println(logPrefix+"节点数据更新");
+				try {
+					Thread.sleep(100);
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+			//更新子节点
+			else if(EventType.NodeChildrenChanged==eventType) {
+				System.out.println(logPrefix+"子节点更新下");
+				try {
+					Thread.sleep(3000 );
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+			else if(EventType.NodeDeleted==eventType) {
+				System.out.println(logPrefix+"节点"+path+" 被删除");
+			}
+			else;
+		}
+		else if(KeeperState.Disconnected==keeperState) {
+			System.out.println(logPrefix+"与zk断开连接");
+		}
+		
+		else if(KeeperState.Expired==keeperState) {
+			System.out.println(logPrefix+"会话失败");
+		}
+		/*else if(KeeperState.AuthFailed==keeperState) {
+			System.out.println(logPrefix+"认证失败");
+		}*/
+		
+	}
+	
+	
+	public static void main(String[] args) throws Exception {
+		ZookeeperWatcher zkWatch=new ZookeeperWatcher();
+		
+		zkWatch.createConnection(CONNECTION_ADDR, SESSION_TIMEOUT);
+		Thread.sleep(1000);
+		
+		//清理节点
+		zkWatch.deleteAllTestPath(false);
+		
+		//
+		if(zkWatch.createPath(PARENT_PATH,System.currentTimeMillis()+"",true)) {
+			System.out.println(1000);
+		}
+	}
+	
+	/**
+	 * 
+	 * @param path
+	 * @param data
+	 * @param needWatch
+	 * @return true：创建节点成功，false：创建节点失败
+	 */
+	public boolean createPath(String path,String data,boolean needWatch) {
+		try {
+			//设置监控（由于zookeeper的监控都是一次性的，所以，每次必须设置监控）
+			this.zk.exists(path, needWatch);
+			System.out.println(LOG_PREFIX_OF_MAIN+"节点创建成功，path："+
+			this.zk.create(
+					path, 
+					data.getBytes(), 
+					Ids.OPEN_ACL_UNSAFE,
+					CreateMode.PERSISTENT)+
+			",content:"+data);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
+
+	private void deleteAllTestPath(boolean newWatch) {
+		if(this.exists(CHILDREN_PATH,newWatch)!=null) {
+			this.deleteNode(CHILDREN_PATH);
+		}
+		if(this.exists(PARENT_PATH, newWatch)!=null) {
+			this.deleteNode(PARENT_PATH);
+		}
+	}
+
+	private void deleteNode(String childrenPath) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private Object exists(String childrenPath, boolean newWatch) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+	
+	
+}

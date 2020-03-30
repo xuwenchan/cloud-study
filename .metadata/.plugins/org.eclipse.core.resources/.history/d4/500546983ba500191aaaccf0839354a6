@@ -1,0 +1,12 @@
+package NetNioTest;
+
+public class UDPClient {
+
+	public static void main(String[] arsg) {
+		
+	}
+	
+	public static void client() {
+		
+	}
+}

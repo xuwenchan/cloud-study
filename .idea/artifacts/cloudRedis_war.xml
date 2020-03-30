@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudRedis:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudRedis/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudRedis</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudRedis.war">
+      <element id="artifact" artifact-name="cloudRedis:war exploded" />
+    </root>
+  </artifact>
+</component>

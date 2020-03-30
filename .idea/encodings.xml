@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudConsumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudEurekaServers/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudFeign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudHttpElasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudHttpElasticsearch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudHttpEsConsumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudHttpEsConsumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudKafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudModel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudNacos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudNacos/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudRabbitMQ/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudRabbitMQCustomer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudRedis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/cloudZuul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/ssoModel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/userServerModule/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudParent/userServerModuleTwo/src/main/java" charset="UTF-8" />
+  </component>
+</project>

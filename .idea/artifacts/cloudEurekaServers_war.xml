@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudEurekaServers:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudEurekaServers/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudEurekaServers</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudEurekaServers.war">
+      <element id="artifact" artifact-name="cloudEurekaServers:war exploded" />
+    </root>
+  </artifact>
+</component>

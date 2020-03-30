@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudNacos:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudNacos/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudNacos</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudNacos.war">
+      <element id="artifact" artifact-name="cloudNacos:war exploded" />
+    </root>
+  </artifact>
+</component>

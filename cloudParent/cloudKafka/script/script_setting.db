@@ -1,0 +1,10 @@
+--开启zookeeper
+1,cd bin
+2,./zkServer.sh start
+3,关闭zookeeper
+./zkServer.sh stop
+
+
+--开启kafka
+cd bin
+./kafka-server-start.sh ../config/server.properties

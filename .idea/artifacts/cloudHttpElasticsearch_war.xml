@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudHttpElasticsearch:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudHttpElasticsearch/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudHttpElasticsearch</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudHttpElasticsearch.war">
+      <element id="artifact" artifact-name="cloudHttpElasticsearch:war exploded" />
+    </root>
+  </artifact>
+</component>

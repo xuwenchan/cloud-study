@@ -1,0 +1,21 @@
+server:
+  port: 8763
+spring:
+  application:
+    name: userModule
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/repertory?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  main:
+    allow-bean-definition-overriding: true #当遇到相同名字的时候，是否允许覆盖注册
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+  type-aliases-package: com.cloud.Model
+

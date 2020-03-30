@@ -1,0 +1,24 @@
+package NetNioTest;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.nio.channels.SocketChannel;
+
+public class UDPClient {
+
+	public static void main(String[] arsg) {
+		
+	}
+	
+	public static void client() {
+		try {
+			//创建一个客户端并设置连接的地址和端口
+			SocketChannel clientChannel=SocketChannel.open(new InetSocketAddress("127.0.0.0.1",9898));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+}

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudKafka:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudKafka/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudKafka</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudKafka.war">
+      <element id="artifact" artifact-name="cloudKafka:war exploded" />
+    </root>
+  </artifact>
+</component>

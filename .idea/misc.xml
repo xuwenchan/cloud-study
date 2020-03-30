@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudConsumer" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudEurekaServers" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudFeign" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudHttpElasticsearch" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudHttpEsConsumer" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudKafka" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudModel" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudNacos" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudRabbitMQ" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudRabbitMQCustomer" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudRedis" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/cloudZuul" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/ssoModel" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/userServerModule" />
+    <file type="web" url="file://$PROJECT_DIR$/cloudParent/userServerModuleTwo" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/cloudParent/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

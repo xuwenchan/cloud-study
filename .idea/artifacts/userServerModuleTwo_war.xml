@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="userServerModuleTwo:war">
+    <output-path>$PROJECT_DIR$/cloudParent/userServerModuleTwo/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>userServerModuleTwo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="userServerModuleTwo.war">
+      <element id="artifact" artifact-name="userServerModuleTwo:war exploded" />
+    </root>
+  </artifact>
+</component>

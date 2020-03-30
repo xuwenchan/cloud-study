@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudRabbitMQCustomer:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudRabbitMQCustomer/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudRabbitMQCustomer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudRabbitMQCustomer.war">
+      <element id="artifact" artifact-name="cloudRabbitMQCustomer:war exploded" />
+    </root>
+  </artifact>
+</component>

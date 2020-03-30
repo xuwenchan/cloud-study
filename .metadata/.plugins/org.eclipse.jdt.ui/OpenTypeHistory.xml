@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=NIOProject/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;javax.xml.parsers(DocumentBuilder.class[DocumentBuilder" modifiers="1057" timestamp="1537628170429"/>
+<typeInfo handle="=NIOProject/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util.concurrent(ThreadPoolExecutor.class[ThreadPoolExecutor" modifiers="33" timestamp="1537628170429"/>
+<typeInfo handle="=NIOProject/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util.concurrent(ConcurrentHashMap.class[ConcurrentHashMap" modifiers="33" timestamp="1537628170429"/>
+<typeInfo handle="=NIOProject/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util(HashMap.class[HashMap" modifiers="33" timestamp="1537628170429"/>
+<typeInfo handle="=NIOProject/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.io(InputStream.class[InputStream" modifiers="1057" timestamp="1537628170429"/>
+<typeInfo handle="=NIOProject/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util.concurrent(ConcurrentLinkedQueue.class[ConcurrentLinkedQueue" modifiers="33" timestamp="1537628170429"/>
+<typeInfo handle="=NIOProject/C:\/Program Files\/Java\/jdk1.8.0_181\/jre\/lib\/rt.jar&lt;java.util.concurrent.locks(AbstractQueuedSynchronizer.class[AbstractQueuedSynchronizer" modifiers="1057" timestamp="1537628170429"/>
+<typeInfo handle="=cloudConsumer/E:\/repertory\/org\/springframework\/spring-beans\/5.1.7.RELEASE\/spring-beans-5.1.7.RELEASE.jar&lt;org.springframework.beans.factory.xml(XmlBeanFactory.class[XmlBeanFactory" modifiers="1048609" timestamp="1570953876999"/>
+<typeInfo handle="=cloudConsumer/E:\/repertory\/org\/springframework\/spring-context\/5.1.7.RELEASE\/spring-context-5.1.7.RELEASE.jar&lt;org.springframework.context.support(FileSystemXmlApplicationContext.class[FileSystemXmlApplicationContext" modifiers="33" timestamp="1570953875797"/>
+<typeInfo handle="=cloudConsumer/E:\/repertory\/org\/springframework\/spring-web\/5.1.7.RELEASE\/spring-web-5.1.7.RELEASE.jar&lt;org.springframework.web.context(ContextLoaderListener.class[ContextLoaderListener" modifiers="33" timestamp="1570954022605"/>
+<typeInfo handle="=cloudConsumer/E:\/repertory\/org\/springframework\/spring-webmvc\/5.1.7.RELEASE\/spring-webmvc-5.1.7.RELEASE.jar&lt;org.springframework.web.servlet(DispatcherServlet.class[DispatcherServlet" modifiers="33" timestamp="1570954026957"/>
+</typeInfoHistroy>

@@ -1,0 +1,72 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.userModule.mapper.OrgBaseMapper">
+
+<sql id="queryObj">
+	<if test="orgId!=null">
+		orgId=#{orgId}
+	</if>
+	<if test="orgName!=null">
+		orgName=#{orgName}
+	</if>
+	<if test="industryClass!=null">
+		industryClass=#{industryClass}
+	</if>
+	<if test="parentOrgId!=null">
+		parentOrgId=#{parentOrgId}
+	</if>
+	<if test="orgNational!=null">
+		orgNational=#{orgNational}
+	</if>
+	<if test="regAddr!=null">
+		regAddr=#{regAddr}
+	</if>
+	<if test="officeAddr!=null">
+		officeAddr=#{officeAddr}
+	</if>
+	<if test="orgCode!=null">
+		orgCode=#{orgCode}
+	</if>
+	<if test="orgContact!=null">
+		orgContact=#{orgContact}
+	</if>
+	<if test="orgContactPhone!=null">
+		orgContactPhone=#{orgContactPhone}
+	</if>
+	<if test="orgPostCode!=null">
+		orgPostCode=#{orgPostCode}
+	</if>
+	<if test="orgCreatTime!=null">
+		orgCreatTime=#{orgCreatTime}
+	</if>
+	<if test="orgLong!=null">
+		orgLong=#{orgLong}
+	</if>
+	<if test="orgLati!=null">
+		orgLati=#{orgLati}
+	</if>
+	<if test="addrProCode!=null">
+		addrProCode=#{addrProCode}
+	</if>
+	<if test="orgProName!=null">
+		orgProName=#{orgProName}
+	</if>
+	<if test="orgCityName!=null">
+		orgCityName=#{orgCityName}
+	</if>
+	<if test="orgDistName!=null">
+		orgDistName=#{orgDistName}
+	</if>
+</sql>
+
+<select id="getOrgInfo" parameterType="com.cloud.Model.OrgBaseInfoModel" resultType="com.cloud.Model.OrgBaseInfoModel">
+	select *
+	from orgbaseinfo
+	<where>
+		<include refid="queryObj"></include>
+	</where>
+
+</select>
+
+</mapper>

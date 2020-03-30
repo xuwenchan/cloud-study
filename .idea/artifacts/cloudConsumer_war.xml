@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudConsumer:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudConsumer/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudConsumer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudConsumer.war">
+      <element id="artifact" artifact-name="cloudConsumer:war exploded" />
+    </root>
+  </artifact>
+</component>

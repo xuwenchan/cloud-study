@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloudModel" />
+        <module name="userServerModule" />
+        <module name="cloudFeign" />
+        <module name="cloudEurekaServers" />
+        <module name="cloudHttpEsConsumer" />
+        <module name="ssoModel" />
+        <module name="cloudHttpElasticsearch" />
+        <module name="cloudKafka" />
+        <module name="cloudConsumer" />
+        <module name="cloudRabbitMQ" />
+        <module name="cloudZuul" />
+        <module name="cloudNacos" />
+        <module name="cloudRabbitMQCustomer" />
+        <module name="userServerModuleTwo" />
+        <module name="cloudRedis" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloudConsumer" target="1.8" />
+      <module name="cloudEurekaServers" target="1.8" />
+      <module name="cloudFeign" target="1.8" />
+      <module name="cloudHttpElasticsearch" target="8" />
+      <module name="cloudHttpEsConsumer" target="1.7" />
+      <module name="cloudKafka" target="1.8" />
+      <module name="cloudModel" target="1.8" />
+      <module name="cloudNacos" target="1.8" />
+      <module name="cloudParent" target="1.8" />
+      <module name="cloudRabbitMQ" target="1.8" />
+      <module name="cloudRabbitMQCustomer" target="1.8" />
+      <module name="cloudRedis" target="1.8" />
+      <module name="cloudZuul" target="1.8" />
+      <module name="ssoModel" target="1.8" />
+      <module name="userServerModule" target="1.8" />
+      <module name="userServerModuleTwo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloudConsumer" options="-parameters" />
+      <module name="cloudEurekaServers" options="-parameters" />
+      <module name="cloudFeign" options="-parameters" />
+      <module name="cloudHttpEsConsumer" options="" />
+      <module name="cloudKafka" options="-parameters" />
+      <module name="cloudModel" options="-parameters" />
+      <module name="cloudNacos" options="-parameters" />
+      <module name="cloudRabbitMQ" options="-parameters" />
+      <module name="cloudRabbitMQCustomer" options="-parameters" />
+      <module name="cloudRedis" options="-parameters" />
+      <module name="cloudZuul" options="-parameters" />
+      <module name="ssoModel" options="-parameters" />
+      <module name="userServerModule" options="-parameters" />
+      <module name="userServerModuleTwo" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,35 @@
+server:
+  port: 8879
+spring:
+  application:
+    name: cloudRedis
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/repertory?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  main:
+    allow-bean-definition-overriding: true #当遇到相同名字的时候，是否允许覆盖注册
+  redis:
+    pool:
+      #最大空闲连接
+      max-idle: 10
+      #最小空闲连接
+      min-idle: 5
+      #最大连接数
+      max-total: 20
+      #最大连接数
+      max-active: 20
+      #最大等待阻塞时间
+      max-wait: -1
+    hostname: 192.168.75.128
+    port: 6379
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+  type-aliases-package: com.cloud.Model
+

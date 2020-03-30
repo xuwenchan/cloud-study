@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1559890651546_0" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=com.springsecurity/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1559890651577_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1561171199541_3" label="cloudParent" name="cloudParent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudKafka" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudZuul" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudParent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudRedis" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudFeign" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudModel" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudConsumer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/userServerModuleTwo" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ssoModel" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudEurekaServers" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/userServerModule" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1559890659755_2" label="Window Working Set" name="Aggregate for window 1559890659755"/>
+</workingSetManager>

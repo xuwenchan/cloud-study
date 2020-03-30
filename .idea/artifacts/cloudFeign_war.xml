@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudFeign:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudFeign/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudFeign</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudFeign.war">
+      <element id="artifact" artifact-name="cloudFeign:war exploded" />
+    </root>
+  </artifact>
+</component>

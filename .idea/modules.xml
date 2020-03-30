@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudConsumer/cloudConsumer.iml" filepath="$PROJECT_DIR$/cloudParent/cloudConsumer/cloudConsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudEurekaServers/cloudEurekaServers.iml" filepath="$PROJECT_DIR$/cloudParent/cloudEurekaServers/cloudEurekaServers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudFeign/cloudFeign.iml" filepath="$PROJECT_DIR$/cloudParent/cloudFeign/cloudFeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudHttpElasticsearch/cloudHttpElasticsearch.iml" filepath="$PROJECT_DIR$/cloudParent/cloudHttpElasticsearch/cloudHttpElasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudHttpEsConsumer/cloudHttpEsConsumer.iml" filepath="$PROJECT_DIR$/cloudParent/cloudHttpEsConsumer/cloudHttpEsConsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudKafka/cloudKafka.iml" filepath="$PROJECT_DIR$/cloudParent/cloudKafka/cloudKafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudModel/cloudModel.iml" filepath="$PROJECT_DIR$/cloudParent/cloudModel/cloudModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudNacos/cloudNacos.iml" filepath="$PROJECT_DIR$/cloudParent/cloudNacos/cloudNacos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudParent.iml" filepath="$PROJECT_DIR$/cloudParent/cloudParent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudRabbitMQ/cloudRabbitMQ.iml" filepath="$PROJECT_DIR$/cloudParent/cloudRabbitMQ/cloudRabbitMQ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudRabbitMQCustomer/cloudRabbitMQCustomer.iml" filepath="$PROJECT_DIR$/cloudParent/cloudRabbitMQCustomer/cloudRabbitMQCustomer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudRedis/cloudRedis.iml" filepath="$PROJECT_DIR$/cloudParent/cloudRedis/cloudRedis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/cloudZuul/cloudZuul.iml" filepath="$PROJECT_DIR$/cloudParent/cloudZuul/cloudZuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/ssoModel/ssoModel.iml" filepath="$PROJECT_DIR$/cloudParent/ssoModel/ssoModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study.iml" filepath="$PROJECT_DIR$/study.iml" group="study" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/userServerModule/userServerModule.iml" filepath="$PROJECT_DIR$/cloudParent/userServerModule/userServerModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudParent/userServerModuleTwo/userServerModuleTwo.iml" filepath="$PROJECT_DIR$/cloudParent/userServerModuleTwo/userServerModuleTwo.iml" />
+    </modules>
+  </component>
+</project>

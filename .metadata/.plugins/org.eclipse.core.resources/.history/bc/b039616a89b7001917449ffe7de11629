@@ -1,0 +1,78 @@
+package zookeeper;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import org.apache.zookeeper.WatchedEvent;
+import org.apache.zookeeper.Watcher;
+import org.apache.zookeeper.ZooKeeper;
+
+public class ZookeeperWatcher implements Watcher{
+
+	/**
+	 * 定义原子变量
+	 */
+	
+	private AtomicInteger seq=new AtomicInteger();
+	/**
+	 * 定义session失效时间
+	 */
+	private static final int SESSION_TIMEOUT=10000;
+	/**
+	 * zookeeper服务器地址
+	 */
+	
+	private static final String CONNECTION_ADDR="192.168.75.128:2181";
+	/**
+	 * zookeeper路径设置
+	 */
+	private static final String PARENT_PATH="/";
+	/**
+	 * zookeeper子路径设置
+	 */
+	private static final String CHILDREN_PATH="/p/c";
+	/**
+	 * 进入标识
+	 */
+	private static final String LOG_PREFIX_OF_MAIN="[MAIN]";
+	/**
+	 * zookeeper变量
+	 */
+	private ZooKeeper zk=null;
+	/**
+	 * 用于等待zookeeper连接建立之后通知阻塞程序继续向下执行
+	 */
+	private CountDownLatch connectedSemaphore =new CountDownLatch(1); 
+	/**
+	 * 创建zk连接
+	 */
+	
+	public void createConnection(String connectAddr,int sessionTimeout) {
+		this.releaseConnection();
+		try {
+			zk=new ZooKeeper(connectAddr,sessionTimeout,this);
+			
+			
+		}catch(Exception e) {
+			
+		}
+	}
+	
+	
+	
+	
+	private void releaseConnection() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	public void process(WatchedEvent event) {
+		
+	}
+
+	
+	
+}

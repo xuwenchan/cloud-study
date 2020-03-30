@@ -1,0 +1,13 @@
+server:
+  port: 8971
+spring:
+  application:
+    name: searchService
+  data:
+    elasticsearch:
+      cluster-name: my-application
+      cluster-nodes: 193.112.23.253:9300
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

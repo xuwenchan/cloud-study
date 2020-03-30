@@ -1,0 +1,6 @@
+package com.userModule.controller;
+
+@RestController
+public class RedisTestController {
+
+}

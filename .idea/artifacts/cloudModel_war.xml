@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudModel:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudModel/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudModel</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudModel.war">
+      <element id="artifact" artifact-name="cloudModel:war exploded" />
+    </root>
+  </artifact>
+</component>
