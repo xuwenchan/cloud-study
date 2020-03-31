@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudzookeeper:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudzookeeper/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudzookeeper</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudzookeeper.war">
+      <element id="artifact" artifact-name="cloudzookeeper:war exploded" />
+    </root>
+  </artifact>
+</component>
