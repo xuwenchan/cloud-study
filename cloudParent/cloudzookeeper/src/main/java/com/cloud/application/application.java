@@ -3,6 +3,9 @@ package com.cloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.PropertySource;
 
 /*
 * 分布式锁的应用场景
@@ -17,6 +20,12 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
+//加载.properties的配置文件
+@PropertySource(value={"classpath:zk.properties"})
+//加载.xml的配置文件
+//@ImportResource(locations= {"classpath:spring-dubbo.xml"})
+
+
 public class application {
 
     public static void main(String[] args){

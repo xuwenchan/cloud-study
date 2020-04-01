@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudorder:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudorder/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudorder</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudorder.war">
+      <element id="artifact" artifact-name="cloudorder:war exploded" />
+    </root>
+  </artifact>
+</component>

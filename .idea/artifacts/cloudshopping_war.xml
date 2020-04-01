@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudshopping:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudshopping/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudshopping</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudshopping.war">
+      <element id="artifact" artifact-name="cloudshopping:war exploded" />
+    </root>
+  </artifact>
+</component>
