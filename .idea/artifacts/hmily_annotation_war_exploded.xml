@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="hmily-annotation:war exploded">
+    <output-path>$PROJECT_DIR$/cloudParent/hmily-annotation/target/hmily-annotation</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>hmily-annotation</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="hmily-annotation" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/cloudParent/hmily-annotation/target/hmily-annotation/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="hmily-annotation/web/Web" />
+    </root>
+  </artifact>
+</component>

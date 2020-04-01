@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloudtcc:war">
+    <output-path>$PROJECT_DIR$/cloudParent/cloudtcc/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloudtcc</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloudtcc.war">
+      <element id="artifact" artifact-name="cloudtcc:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hmily-common:war">
+    <output-path>$PROJECT_DIR$/cloudParent/hmily-common/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>hmily-common</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="hmily-common.war">
+      <element id="artifact" artifact-name="hmily-common:war exploded" />
+    </root>
+  </artifact>
+</component>

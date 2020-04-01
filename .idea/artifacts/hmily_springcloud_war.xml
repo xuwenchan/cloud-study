@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hmily-springcloud:war">
+    <output-path>$PROJECT_DIR$/cloudParent/hmily-springcloud/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>hmily-springcloud</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="hmily-springcloud.war">
+      <element id="artifact" artifact-name="hmily-springcloud:war exploded" />
+    </root>
+  </artifact>
+</component>

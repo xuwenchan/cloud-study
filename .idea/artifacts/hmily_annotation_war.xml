@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hmily-annotation:war">
+    <output-path>$PROJECT_DIR$/cloudParent/hmily-annotation/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>hmily-annotation</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="hmily-annotation.war">
+      <element id="artifact" artifact-name="hmily-annotation:war exploded" />
+    </root>
+  </artifact>
+</component>
