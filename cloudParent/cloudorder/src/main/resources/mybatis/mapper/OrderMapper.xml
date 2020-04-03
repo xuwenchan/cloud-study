@@ -1,0 +1,125 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.order.mapper.OrderMapper">
+
+    <sql id="queryObj">
+        <if test="id!=null">
+            id=#{id}
+        </if>
+        <if test="gid!=null">
+            gid=#{gid}
+        </if>
+        <if test="uid!=null">
+            uid=#{uid}
+        </if>
+        <if test="orderdate!=null">
+            orderdate=#{orderdate}
+        </if>
+        <if test="orderstatus!=null">
+            orderstatus=#{orderstatus}
+        </if>
+        <if test="cancledate!=null">
+            cancledate=#{cancledate}
+        </if>
+        <if test="isok!=null">
+            isok=#{isok}
+        </if>
+        <if test="note!=null">
+            note=#{note}
+        </if>
+    </sql>
+    <sql id="insertObj">
+		insert into orders
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id!=null">
+				id,
+			</if>
+			<if test="gid!=null">
+				gid,
+			</if>
+			<if test="uid!=null">
+				uid,
+			</if>
+			<if test="orderdate!=null">
+				orderdate,
+			</if>
+			<if test="orderstatus!=null">
+				orderstatus,
+			</if>
+			<if test="cancledate!=null">
+				cancledate,
+			</if>
+			<if test="isok!=null">
+				isok,
+			</if>
+			<if test="note!=null">
+				note,
+			</if>
+		</trim>
+
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id!=null">
+				#{id},
+			</if>
+			<if test="gid!=null">
+				#{gid},
+			</if>
+			<if test="uid!=null">
+				#{uid},
+			</if>
+			<if test="orderdate!=null">
+				#{orderdate},
+			</if>
+			<if test="orderstatus!=null">
+				#{orderstatus},
+			</if>
+			<if test="cancledate!=null">
+				#{cancledate},
+			</if>
+			<if test="isok!=null">
+				#{isok},
+			</if>
+			<if test="note!=null">
+				#{note},
+			</if>
+		</trim>
+	</sql>
+
+	<sql id="updateObj">
+		<trim prefix="set" suffixOverrides=",">
+			<if test="gid!=null">
+				gid=#{gid},
+			</if>
+			<if test="uid!=null">
+				uid=#{uid},
+			</if>
+			<if test="orderdate!=null">
+				orderdate=#{orderdate},
+			</if>
+			<if test="orderstatus!=null">
+				orderstatus=#{orderstatus},
+			</if>
+			<if test="cancledate!=null">
+				cancledate=#{cancledate},
+			</if>
+			<if test="isok!=null">
+				isok=#{isok},
+			</if>
+			<if test="note!=null">
+				note=#{note},
+			</if>
+		</trim>
+	</sql>
+
+	<insert id="insertOrder" parameterType="com.cloud.Model.Orders">
+		<include refid="insertObj"></include>
+	</insert>
+
+	<update id="updateOrder" parameterType="com.cloud.Model.Orders">
+		update orders
+		<include refid="updateObj"></include>
+		where id=#{id}
+	</update>
+
+</mapper>
