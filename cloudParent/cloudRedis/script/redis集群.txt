@@ -1,0 +1,27 @@
+Redis主从复制可以根据是否是全量分为全量同步和增量同步。
+
+全量同步：
+
+Redis全量复制一般发生在Slave初始化阶段，这时Slave需要将Master上的所有数据都复制一份。
+
+增量同步：
+
+Redis增量复制是指Slave初始化后开始正常工作时主服务器发生的写操作同步到从服务器的过程。 
+增量复制的过程主要是主服务器每执行一个写命令就会向从服务器发送相同的写命令，从服务器接收并执行收到的写命令。
+
+
+1，进入redis.conf文件
+以前的版本
+在这个#slaveof <masterip> <masterport>注释下添加slaveof，表示这个是某个server的从服务器。
+slaveof <masterip> <masterport>
+slaveof 127.0.0.1 6379
+
+现在的版本
+进入redis.conf文件在命令行状态下 输入 "/"进行搜索输入"master"
+找到 replicaof <masterip> <masterport> 命令
+配置主服务器的ip地址和端口
+
+2.检查是否配置成功
+重启三台服务器，然后在从节点下输入指令： info replication
+
+可以看到role是slave，以及主机ip、端口，状态等信息，即代表配置成功

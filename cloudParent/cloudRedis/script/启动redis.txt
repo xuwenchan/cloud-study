@@ -1,0 +1,13 @@
+1，启动redis
+
+安装不叙述
+
+cd /usr/soft/redis/redis-5.0.5/src
+./redis-server   --启动redis
+
+如果端口占用
+查看端口6379 的pid
+netstat -ap | grep 6379
+杀死进程
+
+kill pid
