@@ -1,0 +1,5 @@
+com\shoping\service\impl\GoodServiceImpl.class
+com\shoping\application\ShoppingApplication.class
+com\shoping\controller\GoodsController.class
+com\shoping\service\GoodService.class
+com\shoping\mapper\GoodsMapper.class

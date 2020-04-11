@@ -1,0 +1,124 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shoping.mapper.GoodsMapper">
+
+    <sql id="queryObj">
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+        <if test="name!=null">
+            and name=#{name}
+        </if>
+        <if test="stock!=null">
+            and stock=#{stock}
+        </if>
+        <if test="inprice!=null">
+            and inprice=#{inprice}
+        </if>
+        <if test="outprice!=null">
+            and outprice=#{outprice}
+        </if>
+        <if test="color!=null">
+            and color=#{color}
+        </if>
+        <if test="note!=null">
+            and note=#{note}
+        </if>
+    </sql>
+    <sql id="insertObj">
+        insert into orders
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name!=null">
+                name,
+            </if>
+            <if test="stock!=null">
+                stock,
+            </if>
+            <if test="inprice!=null">
+                inprice,
+            </if>
+            <if test="outprice!=null">
+                outprice,
+            </if>
+            <if test="color!=null">
+                color,
+            </if>
+            <if test="note!=null">
+                note,
+            </if>
+        </trim>
+
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name!=null">
+                #{name},
+            </if>
+            <if test="stock!=null">
+                #{stock},
+            </if>
+            <if test="inprice!=null">
+                #{inprice},
+            </if>
+            <if test="outprice!=null">
+                #{outprice},
+            </if>
+            <if test="color!=null">
+                #{color},
+            </if>
+            <if test="note!=null">
+                #{note},
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="updateObj">
+        <trim prefix="set" suffixOverrides=",">
+            <if test="name!=null">
+                name=#{name},
+            </if>
+            <if test="stock!=null">
+                stock=#{stock},
+            </if>
+            <if test="inprice!=null">
+                inprice=#{inprice},
+            </if>
+            <if test="outprice!=null">
+                outprice=#{outprice},
+            </if>
+            <if test="color!=null">
+                color=#{color},
+            </if>
+            <if test="note!=null">
+                note=#{note},
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="insertGoods" parameterType="com.cloud.Model.Goods">
+        <include refid="insertObj"></include>
+    </insert>
+
+    <update id="updateGoods" parameterType="com.cloud.Model.Goods">
+        update orders
+        <include refid="updateObj"></include>
+        where id=#{id}
+    </update>
+
+    <select id="queryGoodsById" parameterType="com.cloud.Model.Goods" resultType="com.cloud.Model.Goods">
+        select *
+        from goods
+        <include refid="queryObj"></include>
+        where 1=1
+    </select>
+
+    <update id="reduceStock">
+		update goods
+		set stock=stock-#{count}
+		where id=#{id} and stock=#{stock}
+	</update>
+
+    <select id="queryAllStock">
+        select id,stock
+        from goods
+    </select>
+</mapper>
